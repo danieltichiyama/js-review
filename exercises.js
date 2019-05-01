@@ -194,13 +194,29 @@ var colorMeBadd = {
       pinku:'pink',
       murasaki:'purple',
    },
-   isJapanese:true;
+   isJapanese:true,
 
-}
+};
+
+console.log (colorMeBadd);
 
 /*16. As the general manager for the DevLeague Prep Beer Pong Team, your job is to select the starting players from the roster array. Create two variables, Ateam and Bteam and assign each an empty array. You will then assigned players that have an even number index position to the Ateam and odd number index position to the Bteam. Let the games begin! Console log the results.*/
 
 var roster = ["Alex", "Laura", "Sami", "Jasmine", "Adam", "Dakota", "Jonathon", "Luther", "Kevin", "Vic"];
+
+
+var Ateam = [];
+var Bteam = [];
+
+for (i=0;i<roster.length;i++){
+   if (i%2===0){
+      Ateam.push (roster[i]);
+   }else{
+      Bteam.push(roster[i]);
+   }
+}
+
+console.log (Ateam, Bteam);
 
 /*17. Using the japanPrefectures array you created in exercise 5, create a for loop that iterates through this array and console logs the following message:
 
@@ -208,12 +224,27 @@ var roster = ["Alex", "Laura", "Sami", "Jasmine", "Adam", "Dakota", "Jonathon", 
 
 i.e. "The locaton at 0 is Tokyo."*/
 
+for (i=0;i<japanPrefectures.length;i++){
+   console.log ('The location at i is: '+japanPrefectures[i]+'.');
+}
+
 /*18. Declare a function named addUp.
 This function will take a number parameter and add up all the numbers from 1 to that number.
 The parameter will be any number from 1 to 88.*/
 
+function addUp (num){
+   total = 0;
+   for (i=0;i<num+1;i++){
+      total +=i;
+   }
+   return total;
+}
+
+console.log(addUp(88));
 /*19. Declare a variable named oddNumbers and assign it to an empty array
 Use a for loop to add only odd numbers to an Array.  Add 30 odd numbers to the oddNumbers variable starting with the value of 1.*/
+
+
 
 /*20.  Declare a function named oldEnough.
 This function takes in a number parameter age and returns a Boolean value true or false if the age is lower than the minimum legal drinking age in the Antigua. Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm the number value.  Store the return value to a variable named drinkinAlready and console log this variable*/
