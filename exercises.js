@@ -241,19 +241,78 @@ function addUp (num){
 }
 
 console.log(addUp(88));
+
 /*19. Declare a variable named oddNumbers and assign it to an empty array
 Use a for loop to add only odd numbers to an Array.  Add 30 odd numbers to the oddNumbers variable starting with the value of 1.*/
 
+var oddNumbers = [];
+i=1
 
+while (oddNumbers.length<30){
+   if (i%2!==0){
+      oddNumbers.push (i);
+   }
+   i++;
+}
+
+console.log (oddNumbers);
+console.log (oddNumbers.length);
 
 /*20.  Declare a function named oldEnough.
 This function takes in a number parameter age and returns a Boolean value true or false if the age is lower than the minimum legal drinking age in the Antigua. Invoke this function by passing in a number value.  Google search Antigua's minimum drinking age to confirm the number value.  Store the return value to a variable named drinkinAlready and console log this variable*/
 
+function oldEnough (age){
+   if (age<16){
+      return false;
+   }else{
+      return true;
+   }
+}
+
+console.log(oldEnough (24));
+
 /*21. Declare a function named contentFiller which takes in a single parameter which will be an object.  Write a for loop that will put 5 random numbers between the values of 0 to 20 in the contents array in the bigBox object you created in exercise 14.  Console log the result.*/
 
+function contentFiller (obj){
+   for (i=0;i<6;i++){
+      obj.contents.push(Math.floor(Math.random()*20));
+   }
+   return obj.contents;
+}
+
+console.log(contentFiller(bigBox));
+
 /*22.  Declare a function named firstReverse which takes a single parameter str.  This function will take a string parameter being passed in and return the string in reverse order.*/
+
+var string= 'hello world';
+
+function firstReverse (str){
+   var newStr = "";
+   
+   for (i=str.length;i>-1;i--){
+      newStr += str.slice (i,i+1);
+
+   }
+   
+   return newStr;
+}
+
+console.log (firstReverse(string));
 
 /*23. Declare a function named letterCap which takes a single parameter str. This function will capitalize the first letter of the string you pass in to invoke the function. 
 */
 
+function letterCap (str){
+   newStr = str[0].toUpperCase();
+   newStr +=str.slice(1,str.length);
+   return newStr;
+}
+
+console.log (letterCap (string));
+
 /*24. Declare a function named longestWord which takes a single parameter str. This function will return the longest word in the string when you invoke this function.*/ 
+
+function longestWord (str){
+   var arr = str.split (' ');
+   
+}
